@@ -7,7 +7,7 @@ This project is a dialog system designed to assist with the public service of is
 This dialog system serves the information stage of a public service, specifically aimed at helping users understand their eligibility for the certificate and guiding them through the necessary steps. It is based on a similar case study created for the Mobility Card Service, which includes a questionnaire and a set of frequently asked questions (FAQs) to assist citizens.
 
 ### Template Reference:
-The system's design draws inspiration from a case study example, which you can explore here.
+The system's design draws inspiration from a case study example, which you can explore [here](https://govgr-mobility-card.github.io/info-for-mobility-card-gr/).
 
 ## Features
 
@@ -54,7 +54,7 @@ project
 The dialog system is deployed online. Access it [here](https://varatisg.github.io/Digital-Governance-/).
 
 ### 2. GitHub Repository
-View the source code in this repository: GitHub Link.
+View the source code in this repository: [Repository Link](https://github.com/govgr-mobility-card/ps-info-template/).
 
 
 
