@@ -1,29 +1,30 @@
-# ps-info-template
+# University Studies Certificate Issuance Dialog System
 
-Case Study you can use as a template to create a web-based dialog system that covers the information stage of a public service. This system includes two main elements, a questionnaire and a number of questions (with their answers) that are frequently asked by citizens about this service, known as FAQs. It was created in order to inform citizens whether or not they are eligible for the public service and to provide information on the documents required.
+This project is a dialog system designed to assist with the public service of issuing a university studies certificate. The system has been developed as a case study following the provided template for public service dialog systems and adheres to the requirements specified in the project guidelines.
 
-You can visit the web-based dialogue system [here](https://govgr-mobility-card.github.io/info-for-mobility-card-gr/).
+## Overview
 
-## Requirements
+This dialog system serves the information stage of a public service, specifically aimed at helping users understand their eligibility for the certificate and guiding them through the necessary steps. It is based on a similar case study created for the Mobility Card Service, which includes a questionnaire and a set of frequently asked questions (FAQs) to assist citizens.
 
-To use and modify this project, you need the following:
+### Template Reference:
+The system's design draws inspiration from a case study example, which you can explore here.
 
-- A modern web browser (Chrome, Firefox, Safari, etc.)
-- Visual Studio Code (VSCode) or another code editor
-- Live Server extension for VSCode \*\* (or an equivalent development server like Apache)
-- Basic knowledge of HTML, CSS, and JavaScript
+## Features
 
-\*\* [Live Server Extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer): Go to the Extensions view by clicking on the Extensions icon in the Sidebar or pressing Ctrl+Shift+X. Search for "Live Server" and install the extension by Ritwick Dey (OR search with id = ritwickdey.LiveServer). 
+### 1. FAQ Section
+The system includes 2-3 frequently asked questions with their corresponding answers related to the university studies certificate.
 
-## Setup Instructions
+### 2. Interactive Dialog Flow
+A multi-step conversation is implemented, guiding users through 3-4 steps to complete the process. Each step has branching outcomes based on the user's input.
 
-### 1. Download the Repository
+### 3. Eligibility Information
+The system checks whether users meet the requirements to receive the certificate.
 
-First, download this repository to your local machine.
+### 4. Online Deployment
+The service is hosted online for easy access.
 
-### 2. Open the project folder in VSCode:
-
-Open the project folder in VSCode and start the Live Server (click 'Go Live' at the bottom-right). You will see a port number, e.g., "Port:XXXX". Open the HTML file you want to preview in the browser using this port (e.g., http://localhost:5500/).
+### 5.Source Code Availability
+The source code is open-source and available in this repository.
 
 ## Navigating the Project
 
@@ -46,36 +47,14 @@ project
 │ ├── faq.json # has all FAQs questions&answers in greek
 └── README.md # Project documentation
 ```
-## Deployment Instructions
 
-(Note: You should already have uploaded your project to a github repo)
+## How to Access the Service
 
-To deploy your site to GitHub Pages, follow these steps: 
+### 1. Online Service
+The dialog system is deployed online. Access it here.
 
-1.Make the repository public (unless you have a GitHub Pro account, which allows private repositories to be deployed).
+### 2. GitHub Repository
+View the source code in this repository: GitHub Link.
 
-2.Go to the repository's settings:
-- Navigate to your repository on GitHub.
-- Click on the "Settings" tab at the top of the repository page.
 
-3.Select "Pages" from the menu:
-- On the left-hand side of the settings page, find and click on "Pages".
 
-4.Configure the deployment source:
-- In the "Source" section, select "Deploy from a branch".
-- Choose the branch you want to deploy. It is recommended to merge all your branches into the main branch and deploy from there for simplicity and consistency.
-
-Here’s a visual guide to the steps:
-<div float="left">
-  <img src="screens/deployment.png" />
-</div>
-
-After successfully completing the previous steps, wait a few seconds and refresh the page. You should see the deployment URL at the topp of the Page (green box in the screenshot).
-
-Note: Once set up, any changes pushed to the main branch will be automatically deployed to GitHub Pages.
-
-By following these steps, your site will be live and accessible via the provided URL.
-
-## Acknowledgments
-
-This project was developed as part of a thesis assignment. Special thanks to our professors and mentors for their guidance and support.
