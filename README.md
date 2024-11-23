@@ -51,7 +51,7 @@ project
 ## How to Access the Service
 
 ### 1. Online Service
-The dialog system is deployed online. Access it here.
+The dialog system is deployed online. Access it [here](https://varatisg.github.io/Digital-Governance-/).
 
 ### 2. GitHub Repository
 View the source code in this repository: GitHub Link.
