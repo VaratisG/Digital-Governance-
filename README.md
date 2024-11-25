@@ -23,7 +23,7 @@ The system checks whether users meet the requirements to receive the certificate
 ### 4. Online Deployment
 The service is hosted online for easy access.
 
-### 5.Source Code Availability
+### 5. Source Code Availability
 The source code is open-source and available in this repository.
 
 ## Navigating the Project
