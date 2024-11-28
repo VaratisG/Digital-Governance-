@@ -320,28 +320,15 @@ $("document").ready(function () {
     var allAnswers = [];
     // currentLanguage === "greek" ? result = "Πρέπει να υποβάλετε id1": result = "You must submit id1";
 
-    getEvidencesById(1);
     for (var i = 0; i < totalQuestions; i++) {
       var answer = sessionStorage.getItem("answer_" + i);
       allAnswers.push(answer);
     }
-    if (allAnswers[0] === "2") {
-      getEvidencesById(9);
-    }
-    if (allAnswers[2] === "4") {
-      getEvidencesById(11);
-    }
-    if (allAnswers[4] === "1") {
-      getEvidencesById(6);
-    } else if (allAnswers[4] === "2") {
-      getEvidencesById(7);
-    } else if (allAnswers[4] === "3") {
-      getEvidencesById(8);
-    }
-    if (
-      allAnswers[5] === "1" ||
-      (allAnswers[5] === "2")
-    ) {
+
+    if(allAnswers[2] === "1" && allAnswers[1] === "1")
+      getEvidencesById[5]
+    
+    if ((allAnswers[1] === "1" || (allAnswers[5] === "2")) && allAnswers[2] === "2") {
       getEvidencesById(10);
       currentLanguage === "greek"
         ? setResult("Δικαιούται και ο συνοδός το ίδιο δελτίο μετακίνησης.")

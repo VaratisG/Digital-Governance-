@@ -13,5 +13,10 @@
         "id": 2,
         "question": "Are you a Greek citizen serving in the military?",
         "options": ["Yes", "No"]
+    },
+    {
+        "id": 3,
+        "question": "Are you a user of ID Wallet from gov.gr?",
+        "options":["Yes","No","Not yet, but I am planning to become to become one"]
     }
 ]
