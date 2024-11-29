@@ -427,15 +427,9 @@ $("document").ready(function () {
           $('input[name="question-option"]:checked')
         ) + 1;
       console.log(selectedRadioButtonIndex);
-      if (currentQuestion === 0 && selectedRadioButtonIndex === 3) {
+      if (currentQuestion === 0 && selectedRadioButtonIndex === 2) {
         currentQuestion = -1;
-        currentLanguage === "greek" ? skipToEnd("Μπορείτε να το εκδώσετε ξανά μόνο μια φορά μετά από απώλεια.") : skipToEnd("You can reissue it only one time after loss.");
-      } else if (currentQuestion === 1 && selectedRadioButtonIndex === 2) {
-        currentQuestion = -1;
-        currentLanguage === "greek" ? skipToEnd("Πρέπει να είστε μόνιμος και νόμιμος κάτοικος της Ελλάδας.") : skipToEnd("You must be permanent and legal resident of Greece.");
-      } else if (currentQuestion === 3 && selectedRadioButtonIndex === 2) {
-        currentQuestion = -1;
-        currentLanguage === "greek" ? skipToEnd("Πρέπει να έχετε ποσοστό αναπηρίας 67% και άνω ή να είστε δικαιούχος του επιδόματος ΟΠΕΚΑ.") : skipToEnd("You must have a disability rate of 67% or more or be a beneficiary of the OPEKA benefit.");
+        currentLanguage === "greek" ? skipToEnd("Μπορείς να αιτηθείς αυτό το πιστοποιητικό μόνο εάν έχεις την ιδιότητα φοιτητή/σπουδαστή.") : skipToEnd("You can only apply for this certificate if you have university student status.");
       } else {
         //save selectedRadioButtonIndex to the storage
         userAnswers[currentQuestion] = selectedRadioButtonIndex;
