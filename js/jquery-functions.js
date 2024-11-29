@@ -302,8 +302,8 @@ $("document").ready(function () {
     const errorEnd = document.createElement("h5");
     const error =
       currentLanguage === "greek"
-        ? "Λυπούμαστε αλλά δεν δικαιούστε το δελτίο μετακίνησης ΑΜΕΑ!"
-        : "We are sorry but you are not entitled to the transportation card for the disabled!";
+        ? "Λυπούμαστε αλλά δεν δικαιούστε το πιστοποιητικό σπουδών πανεπιστημίου!"
+        : "We are sorry but you are not entitled to the university degree certificate!";
     errorEnd.className = "govgr-error-summary";
     errorEnd.textContent = error + " " + message;
     $(".question-container").html(errorEnd);
@@ -325,60 +325,33 @@ $("document").ready(function () {
       allAnswers.push(answer);
     }
 
-    if(allAnswers[2] === "1" && allAnswers[1] === "1")
-      getEvidencesById[5]
+    //For greek citizens and greek army citizens
+    if(allAnswers[1] === "1"){
+      if(allAnswers[2] === "1"){
+        getEvidencesById[5]
+      }else{
+        getEvidencesById[1]
+      }
+      getEvidencesById[2]
+      getEvidencesById[3]
+    }
     
-    if ((allAnswers[1] === "1" || (allAnswers[5] === "2")) && allAnswers[2] === "2") {
-      getEvidencesById(10);
-      currentLanguage === "greek"
-        ? setResult("Δικαιούται και ο συνοδός το ίδιο δελτίο μετακίνησης.")
-        : setResult("The companion is also entitled with the same transportation card.");
+    //For EU citizens
+    if(allAnswers[1] === "2"){
+      getEvidencesById[1]
+      getEvidencesById[2]
     }
 
-    if (allAnswers[6] === "2") {
-      getEvidencesById(3);
-      getEvidencesById(4);
-    } else if (allAnswers[6] === "3") {
-      getEvidencesById(3);
-      getEvidencesById(5);
-    }
-    if (allAnswers[7] === "1") {
-      getEvidencesById(12);
+    //For Third country citizens
+    if(allAnswers[1] === "3")
+      getEvidencesById[4]
+
+    
+    
+    if (allAnswers[1] === "1" && (allAnswers[3] === "1" || allAnswers[3] === "3")) {
       currentLanguage === "greek"
-      ? setResult(
-          "Δικαιούστε έκπτωση 50% για τις εκτός ορίων της περιφέρειας σας μετακινήσεις με υπεραστικά ΚΤΕΛ."
-        )
-      : setResult(
-          "You are entitled to a 50% discount for transportation outside the boundaries of your region with long-distance bus services (named KTEL)."
-        );
-    } else if (allAnswers[7] === "2" && allAnswers[5] !== "1") {
-      getEvidencesById(2);
-      if (allAnswers[8] === "1") {
-        currentLanguage === "greek"
-          ? setResult(
-              "Δικαιούσαι δωρεάν μετακίνησης με τα αστικά μέσα συγκοινωνίας της περιφέρειας σου και έκπτωση 50% για τις εκτός ορίων της περιφέρειας σου μετακινήσεις με υπεραστικά ΚΤΕΛ."
-            )
-          : setResult(
-              "You are entitled to free transportation with the urban public bus of your region and a 50% discount for transportation outside the boundaries of your region with long-distance (intercity) bus services (named KTEL)."
-            );
-      } else if (allAnswers[8] === "2") {
-        currentLanguage === "greek"
-          ? setResult(
-              "Δικαιούσαι έκπτωση 50% για τις εκτός ορίων της περιφέρειας σου μετακινήσεις με υπεραστικά ΚΤΕΛ."
-            )
-          : setResult(
-              "You are entitled to a 50% discount for transportation outside the boundaries of your region with long-distance bus services (named KTEL)."
-            );
-      }
-    }
-    else if(allAnswers[7] === "2" && allAnswers[5] === "1"){
-      currentLanguage === "greek"
-      ? setResult(
-          "Δικαιούσαι δωρεάν μετακίνησης με τα αστικά μέσα συγκοινωνίας της περιφέρειας σου και έκπτωση 50% για τις εκτός ορίων της περιφέρειας σου μετακινήσεις με υπεραστικά ΚΤΕΛ."
-        )
-      : setResult(
-          "You are entitled to free transportation with the urban public bus of your region and a 50% discount for transportation outside the boundaries of your region with long-distance (intercity) bus services (named KTEL)."
-        );
+        ? setResult("Εναλλακτικά αντί του φυσικού (έγχαρτου) Δελτίου Ταυτότητας ή Άδειας Οδήγησης, η ταυτοποίηση μπορεί να γίνει μέσω του ID wallet του gov.gr.")
+        : setResult("Alternatively, instead of the physical (paper) ID card or Driving Licence, the identification can be done through the ID wallet of gov.gr.");
     }
   }
 
