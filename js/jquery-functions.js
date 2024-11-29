@@ -325,29 +325,22 @@ $("document").ready(function () {
       allAnswers.push(answer);
     }
 
-    //For greek citizens and greek army citizens
-    if(allAnswers[1] === "1"){
+    
+    if(allAnswers[1] === "1"){ //For greek citizens and greek army citizens
       if(allAnswers[2] === "1"){
-        getEvidencesById[5]
+        getEvidencesById[5]  // Army
+        console.log("Evidence added")
       }else{
-        getEvidencesById[1]
+        getEvidencesById[1]  // not Army
       }
       getEvidencesById[2]
       getEvidencesById[3]
-    }
-    
-    //For EU citizens
-    if(allAnswers[1] === "2"){
+    }else if(allAnswers[1] === "2"){ //for EU citizens
       getEvidencesById[1]
       getEvidencesById[2]
-    }
-
-    //For Third country citizens
-    if(allAnswers[1] === "3")
+    }else if(allAnswers[1] === "3") //for Third Country Citizens
       getEvidencesById[4]
-
-    
-    
+   
     if (allAnswers[1] === "1" && (allAnswers[3] === "1" || allAnswers[3] === "3")) {
       currentLanguage === "greek"
         ? setResult("Εναλλακτικά αντί του φυσικού (έγχαρτου) Δελτίου Ταυτότητας ή Άδειας Οδήγησης, η ταυτοποίηση μπορεί να γίνει μέσω του ID wallet του gov.gr.")
