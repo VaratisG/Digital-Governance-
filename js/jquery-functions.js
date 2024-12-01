@@ -54,40 +54,29 @@ $("document").ready(function () {
   }
 
   //Once the form begins, the evidences' data and length are fetched.
-  function getEvidences() {
-    return fetch("question-utils/cpsv.json")
-      .then((response) => response.json())
-      .then((data) => {
-        all_evidences = data;
-        totalEvidences = data.length;
-
-        // Fetch the second JSON file
-        return fetch("question-utils/cpsv-en.json")
-          .then((response) => response.json())
-          .then((dataEn) => {
-            all_evidences_en = dataEn;
-          })
-          .catch((error) => {
-            console.error("Failed to fetch cpsv-en:", error);
-
-            // Show error message to the user
-            const errorMessage = document.createElement("div");
-            errorMessage.textContent = "Error: Failed to fetch cpsv-en.json.";
-            $(".question-container").html(errorMessage);
-
-            hideFormBtns();
-          });
-      })
-      .catch((error) => {
-        console.error("Failed to fetch cpsv:", error);
-
-        // Show error message to the user
-        const errorMessage = document.createElement("div");
-        errorMessage.textContent = "Error: Failed to fetch cpsv.json.";
-        $(".question-container").html(errorMessage);
-
-        hideFormBtns();
-      });
+  async function getEvidences() {
+    try {
+      // Fetch the first JSON file (cpsv.json)
+      const response = await fetch("question-utils/cpsv.json");
+      const data = await response.json();
+      all_evidences = data;
+      totalEvidences = data.length;
+  
+      // Fetch the second JSON file (cpsv-en.json)
+      const responseEn = await fetch("question-utils/cpsv-en.json");
+      const dataEn = await responseEn.json();
+      all_evidences_en = dataEn;
+  
+    } catch (error) {
+      console.error("Failed to fetch evidences:", error);
+  
+      // Show error message to the user
+      const errorMessage = document.createElement("div");
+      errorMessage.textContent = "Error: Failed to fetch evidences.";
+      $(".question-container").html(errorMessage);
+  
+      hideFormBtns();
+    }
   }
 
   //Once the form begins, the faqs' data is fetched.
@@ -123,6 +112,8 @@ $("document").ready(function () {
 
   function getEvidencesById(id) {
     var selectedEvidence;
+    currentLanguage === "greek" ? console.log("TRUE") : console.log("FALSE");
+
     currentLanguage === "greek"
       ? (selectedEvidence = all_evidences)
       : (selectedEvidence = all_evidences_en);
@@ -325,21 +316,21 @@ $("document").ready(function () {
       allAnswers.push(answer);
     }
 
+
     
     if(allAnswers[1] === "1"){ //For greek citizens and greek army citizens
       if(allAnswers[2] === "1"){
-        getEvidencesById[5]  // Army
-        console.log("Evidence added")
+        getEvidencesById(5)  // Army
       }else{
-        getEvidencesById[1]  // not Army
+        getEvidencesById(1)  // not Army
       }
-      getEvidencesById[2]
-      getEvidencesById[3]
+      getEvidencesById(2)
+      getEvidencesById(3)
     }else if(allAnswers[1] === "2"){ //for EU citizens
-      getEvidencesById[1]
-      getEvidencesById[2]
+      getEvidencesById(1)
+      getEvidencesById(2)
     }else if(allAnswers[1] === "3") //for Third Country Citizens
-      getEvidencesById[4]
+      getEvidencesById(4)
    
     if (allAnswers[1] === "1" && (allAnswers[3] === "1" || allAnswers[3] === "3")) {
       currentLanguage === "greek"
