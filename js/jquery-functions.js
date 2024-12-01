@@ -353,10 +353,10 @@ $("document").ready(function () {
     evidenceListElement.setAttribute("id", "evidences");
     currentLanguage === "greek"
       ? $(".question-container").append(
-          "<br /><br /><h5 class='answer'>Το δικαιολογητικό που πρέπει να προσκομίσετε για να λάβετε το δελτίο μετακίνησης είναι ένα από τα εξής:</h5><br />"
+          "<br /><br /><h5 class='answer'>Το δικαιολογητικό που πρέπει να προσκομίσετε για να λάβετε το πιστοποιητικό είναι ένα από τα εξής:</h5><br />"
         )
       : $(".question-container").append(
-          "<br /><br /><h5 class='answer'>The document you need to provide in order to receive your transportation card is one of the following:</h5><br />"
+          "<br /><br /><h5 class='answer'>The document you need to provide in order to receive your certificate is one of the following:</h5><br />"
         );
     $(".question-container").append(evidenceListElement);
     $("#faqContainer").load("faq.html");
