@@ -332,7 +332,7 @@ $("document").ready(function () {
     }else if(allAnswers[1] === "3") //for Third Country Citizens
       getEvidencesById(4)
    
-    if (allAnswers[1] === "1" && (allAnswers[3] === "1" || allAnswers[3] === "3")) {
+    if (allAnswers[1] === "1" && (allAnswers[3] === "1" || allAnswers[3] === "3") && (allAnswers[2] === "2")) {
       currentLanguage === "greek"
         ? setResult("Εναλλακτικά αντί του φυσικού (έγχαρτου) Δελτίου Ταυτότητας ή Άδειας Οδήγησης, η ταυτοποίηση μπορεί να γίνει μέσω του ID wallet του gov.gr.")
         : setResult("Alternatively, instead of the physical (paper) ID card or Driving Licence, the identification can be done through the ID wallet of gov.gr.");
