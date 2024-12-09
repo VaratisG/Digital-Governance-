@@ -11,7 +11,7 @@
     },
     {
         "id": 2,
-        "question": "Are you a Greek citizen serving in the military?",
+        "question": "Are you actively serving in a corps? (Police, Army, Fire Brigade, etc.)",
         "options": ["Yes", "No"]
     },
     {
