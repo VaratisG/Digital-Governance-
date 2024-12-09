@@ -58,8 +58,8 @@
                     {
                         "id": "ev0003",
                         "type": "Evidence",
-                        "name": "Military Identity Card",
-                        "description": "Identity card for the duration of the applicant's military service"
+                        "name": "Citizen in Uniform Identity Card",
+                        "description": "Identity card for the duration of the applicant's service"
                     }
                 ]
             }            
